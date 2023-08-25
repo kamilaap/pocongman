@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  #road-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('./assets/bg2.jpg');
+    background-size: cover;
+    animation: scrollLeft 5s linear infinite;
+  }
+
+  #road-background-2 {
+      position: absolute;
+      width: 100%; 
+      height: 100%;
+      top: 0;
+      left: 0; 
+      z-index: -1;
+      background-image: url('./assets/bg2.jpg');
+      background-size: cover;
+      animation: scrollLeft2 5s linear infinite;
+    }
+    
+  @keyframes scrollLeft {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+  }    
+  @keyframes scrollLeft2 {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0%); }
+    }    
+
+    .orang {
+        position: absolute;
+        height: 200px;
+        position: relative;
+        transition: top 0.5s ease;
+    }
+  
+    .ghost {
+        width: 200px;
+        height: 200px;
+        background-image: url('./assets/hani.gif');
+        background-size: 200px 200px;
+        position: absolute;
+        top: 67%;
+        right: -50px; /*Mulai dari kanan */
+        animation: ghostMove 5s linear infinite; /* Durasi animasi */
+      }
+      .bat {
+        width: 100px;
+        height: 100px;
+        background-image: url('./assets/bat.gif');
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        right: -50px; /*Mulai dari kanan */
+        animation: ghostMove 4s linear infinite; /* Durasi animasi */
+      }
+      
+      .meledak {
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        background-image: url('assets/duar.gif');
+        background-size: cover;
+        display: none;
+        z-index: 60;
+      }
+      @keyframes ghostMove {
+        0% {
+          transform: translateX(500px); /* Posisi mulai */
+        }
+        100% {
+          transform: translateX(-110vw); /* Posisi akhir */
+        }
+      }
+      
+      
