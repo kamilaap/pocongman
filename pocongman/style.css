@@ -28,8 +28,8 @@ body {
     }
     
   @keyframes scrollLeft {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-100%); }
+    from { transform: translateX(0%); } /*Menggerakkan elemen secara horizontal dengan animasi.*/
+    to { transform: translateX(-100%); } /* Posisi awal dan akhir dari elemen dalam animasi.*/
   }    
   @keyframes scrollLeft2 {
       from { transform: translateX(100%); }
@@ -64,6 +64,16 @@ body {
         animation: ghostMove 4s linear infinite; /* Durasi animasi */
       }
       
+      .balon {
+        width: 100px;
+        height: 100px;
+        background-image: url('./assets/balon.gif');
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+       left: -50px;/*Mulai dari kanan */
+        animation: ghostMove 4s linear infinite; /* Durasi animasi */
+      }
       .meledak {
         position: absolute;
         width: 300px;
