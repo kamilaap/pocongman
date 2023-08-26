@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> POCONG MAN </title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script> <!--Menghubungkan berkas CSS Tailwind dari CDN -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body >
 
-    <audio id="death-sound">
+    <audio id="mati-sound">
         <source src="./assets/Rasengan.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <audio id="jump-sound">
+      <audio id="loncat-sound">
         <source src="./assets/Suara Kuntilanak Tertawa.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-      <audio id="land-sound">
+      <audio id="jalan-sound">
         <source src="./assets/suarajurig.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
-        
       
       <div class="score font-semibold z-10 text-2xl text-white w-screen text-center absolute top-10" style="font-family: 'Press Start 2P', cursive;" id="score"></div>
 
@@ -29,28 +28,27 @@
     <div id="road-background-2"></div>
     <div class="meledak"></div>
 
-
-
-   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <img class="orang top-0 left-10 " src="assets/babeh-unscreen.gif" id="orang">
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <img class="orang top-0 left-10 " src="assets/orang.gif" id="orang">
     <div class="ghost" id="ghost"></div>
     <div class="bat" id="bat"></div>
+    <div class="balon"></div>
 
    <a href="home.html" id="exit-button" class="absolute top-4 right-4 bg-black text-white py-2 px-4 rounded-md shadow-md">
       Exit
   </button>
 
     <script>
-        var orangsrc = sessionStorage.getItem('orangimg');
+        var orangsrc = sessionStorage.getItem('orangimg'); 
         const manusia_img = document.getElementById('orang')
-        babeh.gif = orangsrc
+        manusia_img.src = orangsrc;
 
         var ghostsrc = sessionStorage.getItem('pocongimg');
         const ghost_img = document.getElementById('ghost')
         ghost_img.style.backgroundImage = 'url(' + ghostsrc + ')'
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--Menghubungkan berkas Swal2 (SweetAlert2) -->
     <script src="script.js"></script>
 
 </body>
